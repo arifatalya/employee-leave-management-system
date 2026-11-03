@@ -1,0 +1,433 @@
+{
+  "info": {
+    "_postman_id": "3c351123-74de-4e42-bdcb-592e733727ff",
+    "name": "Main Auth and Health Checks",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31059158",
+    "_collection_link": "https://go.postman.co/collection/31059158-3c351123-74de-4e42-bdcb-592e733727ff?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Database Connection Test",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health/db",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "health",
+            "db"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Database Connection Test",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health/db",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health",
+                "db"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "100"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"64-E2RKcByvvu8Nzw3g4isVMegm34Y\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 02 Nov 2026 23:49:34 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Database query successful.\",\n    \"data\": {\n        \"database_name\": \"employee_leave_ms\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "User Login (Admin)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response.json();\r",
+              "\r",
+              "if (response.success && response.data?.access_token) {\r",
+              "    pm.environment.set(\"access_token\", response.data.access_token);\r",
+              "}\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{access_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"cmayuzumi@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "User Login (Admin)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"cmayuzumi@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "663"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"297-U8YnMvIbncvIRIslRUWFMRWDlMU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 02:29:15 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login berhasil.\",\n    \"data\": {\n        \"access_token\": \"{{json_web_token}}\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Chihiro Mayuzumi\",\n            \"role\": \"ADMIN\",\n            \"division_id\": 1\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "User Login (Division Head)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response.json();\r",
+              "\r",
+              "if (response.success && response.data?.access_token) {\r",
+              "    pm.environment.set(\"access_token\", response.data.access_token);\r",
+              "}\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{access_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"sakashi@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "User Login (Division Head)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sakashi@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "669"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"29d-4hNbqIkHGY7VSTBYPCbTzIUtBl4\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:06:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login berhasil.\",\n    \"data\": {\n        \"access_token\": \"{{json_web_token}}\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Seijuro Akashi\",\n            \"role\": \"DIVISION_HEAD\",\n            \"division_id\": 1\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "User Login (Staff)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response.json();\r",
+              "\r",
+              "if (response.success && response.data?.access_token) {\r",
+              "    pm.environment.set(\"access_token\", response.data.access_token);\r",
+              "}\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{access_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"cmayuzumi@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "User Login (Staff)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"amurasakibara@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "667"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"29b-nhi1hFAOTDssQyGORgt9pRp61xM\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:22:29 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login berhasil.\",\n    \"data\": {\n        \"access_token\": \"{{json_web_token}}\",\n        \"user\": {\n            \"id\": 4,\n            \"name\": \"Atsushi Murasakibara\",\n            \"role\": \"STAFF\",\n            \"division_id\": 1\n        }\n    }\n}"
+        }
+      ]
+    }
+  ]
+}

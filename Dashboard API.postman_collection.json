@@ -1,0 +1,286 @@
+{
+  "info": {
+    "_postman_id": "66f8008e-7270-4283-a053-5e173540d418",
+    "name": "Dashboard API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31059158",
+    "_collection_link": "https://go.postman.co/collection/31059158-66f8008e-7270-4283-a053-5e173540d418?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Dashboard Summary (Admin)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0m4l}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/dashboard/summary",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "dashboard",
+            "summary"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Dashboard Summary (Admin)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0m4l}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/dashboard/summary",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "208"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"d0-S9u/2XJ0xM74/dP0bs2fj0VSio0\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:43:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Dashboard summary retrieved successfully\",\n    \"data\": {\n        \"totalEmployees\": 9,\n        \"activeEmployees\": 8,\n        \"inactiveEmployees\": 1,\n        \"pendingLeaveRequests\": 1,\n        \"approvedThisMonth\": 1,\n        \"rejectedThisMonth\": 1\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Summary (Division Head)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_01oh}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/dashboard/summary",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "dashboard",
+            "summary"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Dashboard Summary (Division Head)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_01oh}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/dashboard/summary",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "208"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"d0-7ZEbAnbkOwjsYCGYgsjBm6N5WTU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:44:45 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Dashboard summary retrieved successfully\",\n    \"data\": {\n        \"totalEmployees\": 4,\n        \"activeEmployees\": 4,\n        \"inactiveEmployees\": 0,\n        \"pendingLeaveRequests\": 0,\n        \"approvedThisMonth\": 0,\n        \"rejectedThisMonth\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Summary (Staff)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_1cvk}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/dashboard/summary",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "dashboard",
+            "summary"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Dashboard Summary (Staff)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_1cvk}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/dashboard/summary",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "217"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"d9-PxV4DDFPLBrI8v3VVgQ0uzo5Hwk\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:45:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Dashboard summary retrieved successfully\",\n    \"data\": {\n        \"totalEmployees\": null,\n        \"activeEmployees\": null,\n        \"inactiveEmployees\": null,\n        \"pendingLeaveRequests\": 1,\n        \"approvedThisMonth\": 1,\n        \"rejectedThisMonth\": 1\n    }\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_0m4l",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0oi8",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_01oh",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0eke",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_1cvk",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0un9",
+      "secret": true
+    }
+  ]
+}

@@ -1,0 +1,1489 @@
+{
+  "info": {
+    "_postman_id": "a8e03fff-190a-4926-bfc4-da670ef7fbae",
+    "name": "Employee APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31059158",
+    "_collection_link": "https://go.postman.co/collection/31059158-a8e03fff-190a-4926-bfc4-da670ef7fbae?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "List Employees",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{access_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0snq}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"thimuro@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/employees/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "List Employees",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"thimuro@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/employees/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2803"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"af3-dwVF9V6ywtfz24KPM03NTYfov3k\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 02:33:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"employees\": [\n            {\n                \"id\": 8,\n                \"nip\": \"199606032026011\",\n                \"nama\": \"Shoichi Imayoshi\",\n                \"email\": \"simayoshi@company-name.com\",\n                \"alamat\": \"Jl. K.H. Mas Mansyur No. 1, Karet Tengsin, Tanah Abang, Kota Jakarta Pusat, DKI Jakarta\",\n                \"division_id\": 3,\n                \"division_name\": \"Human Capital\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 7,\n                \"nip\": \"199807072026091\",\n                \"nama\": \"Shintaro Midorima\",\n                \"email\": \"smidorima@company-name.com\",\n                \"alamat\": \"Jl. Panjang No.1, Cipulir, Kebayoran Lama, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 6,\n                \"nip\": \"199811212026091\",\n                \"nama\": \"Kazunari Takao\",\n                \"email\": \"ktakao@company-name.com\",\n                \"alamat\": \"Jl. Tebet Raya No.14, Tebet Barat, Tebet, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 5,\n                \"nip\": \"199611112026011\",\n                \"nama\": \"Kiyoshi Miyaji\",\n                \"email\": \"kmiyaji@company-name.com\",\n                \"alamat\": \"Jl. Kemang Utara No.22, Bangka, Mampang Prapatan, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 4,\n                \"nip\": \"199810092026041\",\n                \"nama\": \"Atsushi Murasakibara\",\n                \"email\": \"amurasakibara@company-name.com\",\n                \"alamat\": \"Jl. Harsono RM Belakang No.28, Ragunan, Pasar Minggu, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:00.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:00.000Z\"\n            },\n            {\n                \"id\": 3,\n                \"nip\": \"199710302026041\",\n                \"nama\": \"Tatsuya Himuro\",\n                \"email\": \"thimuro@company-name.com\",\n                \"alamat\": \"Jl. Kuningan Barat Raya No. 8, Kuningan Barat, Mampang Prapatan, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:00.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:00.000Z\"\n            },\n            {\n                \"id\": 2,\n                \"nip\": \"199812202026021\",\n                \"nama\": \"Seijuro Akashi\",\n                \"email\": \"sakashi@company-name.com\",\n                \"alamat\": \"Jl. Kp. Bandan No.1, Ancol, Pademangan, Kota Jakarta Utara, DKI Jakarta\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:00.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:00.000Z\"\n            },\n            {\n                \"id\": 1,\n                \"nip\": \"199603012026101\",\n                \"nama\": \"Chihiro Mayuzumi\",\n                \"email\": \"cmayuzumi@company-name.com\",\n                \"alamat\": \"Jl. Dr. Cipto Mangun Kusumo No.69, Paninggilan Utara, Ciledug, Kota Tangerang, Banten\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:00.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:00.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 8,\n            \"totalPages\": 1\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Employee Detail",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Employee Detail",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"thimuro@company-name.com\",\r\n    \"password\": \"heardtheirname\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/employees/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                "3"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "393"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"189-En+j91NlAQDgtqZ6/DbAIjuWzfM\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 02:37:45 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"employee\": {\n            \"id\": 3,\n            \"nip\": \"199710302026041\",\n            \"nama\": \"Tatsuya Himuro\",\n            \"email\": \"thimuro@company-name.com\",\n            \"alamat\": \"Jl. Kuningan Barat Raya No. 8, Kuningan Barat, Mampang Prapatan, Kota Jakarta Selatan, DKI Jakarta\",\n            \"division_id\": 1,\n            \"division_name\": \"Information Technology\",\n            \"status\": \"ACTIVE\",\n            \"created_at\": \"2026-11-03T01:01:00.000Z\",\n            \"updated_at\": \"2026-11-03T01:01:00.000Z\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Employee Detail (Filtered)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0snq}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/employees?page=1&limit=5",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Employee Detail (Filtered)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employees?page=1&limit=5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1767"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"6e7-HJdiIibgIuYrZo5Y9llFIFdg/Vg\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 02:48:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"employees\": [\n            {\n                \"id\": 8,\n                \"nip\": \"199606032026011\",\n                \"nama\": \"Shoichi Imayoshi\",\n                \"email\": \"simayoshi@company-name.com\",\n                \"alamat\": \"Jl. K.H. Mas Mansyur No. 1, Karet Tengsin, Tanah Abang, Kota Jakarta Pusat, DKI Jakarta\",\n                \"division_id\": 3,\n                \"division_name\": \"Human Capital\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 7,\n                \"nip\": \"199807072026091\",\n                \"nama\": \"Shintaro Midorima\",\n                \"email\": \"smidorima@company-name.com\",\n                \"alamat\": \"Jl. Panjang No.1, Cipulir, Kebayoran Lama, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 6,\n                \"nip\": \"199811212026091\",\n                \"nama\": \"Kazunari Takao\",\n                \"email\": \"ktakao@company-name.com\",\n                \"alamat\": \"Jl. Tebet Raya No.14, Tebet Barat, Tebet, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 5,\n                \"nip\": \"199611112026011\",\n                \"nama\": \"Kiyoshi Miyaji\",\n                \"email\": \"kmiyaji@company-name.com\",\n                \"alamat\": \"Jl. Kemang Utara No.22, Bangka, Mampang Prapatan, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            },\n            {\n                \"id\": 4,\n                \"nip\": \"199810092026041\",\n                \"nama\": \"Atsushi Murasakibara\",\n                \"email\": \"amurasakibara@company-name.com\",\n                \"alamat\": \"Jl. Harsono RM Belakang No.28, Ragunan, Pasar Minggu, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:00.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:00.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 5,\n            \"total\": 8,\n            \"totalPages\": 2\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Employee Detail (Search)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0l7v}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/employees?page=1&limit=10&search=midorima&status=ACTIVE",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "search",
+              "value": "midorima"
+            },
+            {
+              "key": "status",
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Employee Detail (Search by Name)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employees?search=Takao",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Takao"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "417"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a1-dVcnvDnnrcw6MY1QCRj9AxpqHCE\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 02:50:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"employees\": [\n            {\n                \"id\": 6,\n                \"nip\": \"199811212026091\",\n                \"nama\": \"Kazunari Takao\",\n                \"email\": \"ktakao@company-name.com\",\n                \"alamat\": \"Jl. Tebet Raya No.14, Tebet Barat, Tebet, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 1,\n            \"totalPages\": 1\n        }\n    }\n}"
+        },
+        {
+          "name": "Employee Detail (Search by NIP)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employees?search=199807072026091",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "199807072026091"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "424"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a8-IV2OMeHZoFd21bzawDJsQGW1AMI\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:16:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"employees\": [\n            {\n                \"id\": 7,\n                \"nip\": \"199807072026091\",\n                \"nama\": \"Shintaro Midorima\",\n                \"email\": \"smidorima@company-name.com\",\n                \"alamat\": \"Jl. Panjang No.1, Cipulir, Kebayoran Lama, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 1,\n            \"totalPages\": 1\n        }\n    }\n}"
+        },
+        {
+          "name": "Employee Detail (Page, Limit, Name, Status)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0l7v}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employees?page=1&limit=10&search=midorima&status=ACTIVE",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "search",
+                  "value": "midorima"
+                },
+                {
+                  "key": "status",
+                  "value": "ACTIVE"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "424"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a8-IV2OMeHZoFd21bzawDJsQGW1AMI\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:00:37 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"employees\": [\n            {\n                \"id\": 7,\n                \"nip\": \"199807072026091\",\n                \"nama\": \"Shintaro Midorima\",\n                \"email\": \"smidorima@company-name.com\",\n                \"alamat\": \"Jl. Panjang No.1, Cipulir, Kebayoran Lama, Kota Jakarta Selatan, DKI Jakarta\",\n                \"division_id\": 2,\n                \"division_name\": \"Finance\",\n                \"status\": \"ACTIVE\",\n                \"created_at\": \"2026-11-03T01:01:01.000Z\",\n                \"updated_at\": \"2026-11-03T01:01:01.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 1,\n            \"totalPages\": 1\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add New Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0snq}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nip\": \"199808022026091\",\r\n    \"nama\": \"Taiga Kagami\",\r\n    \"email\": \"tkagami@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n\t\t\"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/employees",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add New Employee",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nip\": \"199808022026091\",\r\n    \"nama\": \"Taiga Kagami\",\r\n    \"email\": \"tkagami@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n\t\t\"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "416"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a0-B/A5Kk0pl5/apNzT+/dGf9+27eU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:04:04 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Employee created successfully.\",\n    \"data\": {\n        \"employee\": {\n            \"id\": 11,\n            \"nip\": \"199808022026091\",\n            \"nama\": \"Taiga Kagami\",\n            \"email\": \"tkagami@company-name.com\",\n            \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\n            \"division_id\": 1,\n            \"division_name\": \"Information Technology\",\n            \"status\": \"ACTIVE\",\n            \"created_at\": \"2026-11-03T03:04:04.000Z\",\n            \"updated_at\": \"2026-11-03T03:04:04.000Z\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add New Employee (No ADMIN Token)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_16xn}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nip\": \"199801312026091\",\r\n    \"nama\": \"Tetsuya Kuroko\",\r\n    \"email\": \"tkuroko@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n    \"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/employees",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add New Employee (No ADMIN Token)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_16xn}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nip\": \"199801312026091\",\r\n    \"nama\": \"Tetsuya Kuroko\",\r\n    \"email\": \"tkuroko@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n    \"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ]
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "81"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"51-Dk5S1/bsrkWHt120bF76q8ZDFxM\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:24:12 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"You do not have permission to access this resource.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add New Employee (Missing Token)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nip\": \"199801312026091\",\r\n    \"nama\": \"Tetsuya Kuroko\",\r\n    \"email\": \"tkuroko@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n    \"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/employees",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add New Employee (Missing Token)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nip\": \"199801312026091\",\r\n    \"nama\": \"Tetsuya Kuroko\",\r\n    \"email\": \"tkuroko@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n    \"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "55"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"37-URj94g6QL3KXTQu1qO7FhtYRZ/k\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:25:27 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Access token is required.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add New Employee (Duplicate Attempt)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0snq}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nip\": \"199808022026091\",\r\n    \"nama\": \"Taiga Kagami\",\r\n    \"email\": \"tkagami@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n\t\t\"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/employees",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add New Employee (Duplicate Attempt)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nip\": \"199808022026091\",\r\n    \"nama\": \"Taiga Kagami\",\r\n    \"email\": \"tkagami@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 1,\r\n\t\t\"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ]
+            }
+          },
+          "status": "Conflict",
+          "code": 409,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "58"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3a-9w12kW69RpTGWUio53Izsc7TuyQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:20:28 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"NIP or email already exists.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add New Employee (INACTIVE Division)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0w3q}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nip\": \"199801312026091\",\r\n    \"nama\": \"Tetsuya Kuroko\",\r\n    \"email\": \"tkuroko@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 4,\r\n    \"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/employees",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add New Employee (INACTIVE Division)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_0w3q}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nip\": \"199801312026091\",\r\n    \"nama\": \"Tetsuya Kuroko\",\r\n    \"email\": \"tkuroko@company-name.com\",\r\n    \"alamat\": \"Jl. Melawai 3 Blk M, Melawai, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\r\n    \"division_id\": 4,\r\n    \"password\": \"temporaryPassword\",\r\n    \"role\": \"STAFF\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "61"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3d-w0hHNzEsSBjy2jeCsM81YklocKU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:42:16 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Division not found or inactive.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Employee Field",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_147b}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\": \"ACTIVE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/employees/5",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees",
+            "5"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Employee Field (Address)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"Taiga Kagami\",\r\n    \"alamat\": \"Jl. Prapanca Raya No.95, Cipete Utara, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                "11"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "425"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a9-LgHI6A0i1fXlg/fh4sxmLJ9DeJA\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:08:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Employee updated successfully.\",\n    \"data\": {\n        \"employee\": {\n            \"id\": 11,\n            \"nip\": \"199808022026091\",\n            \"nama\": \"Taiga Kagami\",\n            \"email\": \"tkagami@company-name.com\",\n            \"alamat\": \"Jl. Prapanca Raya No.95, Cipete Utara, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\n            \"division_id\": 1,\n            \"division_name\": \"Information Technology\",\n            \"status\": \"ACTIVE\",\n            \"created_at\": \"2026-11-03T03:04:04.000Z\",\n            \"updated_at\": \"2026-11-03T03:08:53.000Z\"\n        }\n    }\n}"
+        },
+        {
+          "name": "Update Employee Field (Division Change)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"division_id\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees/11",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                "11"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "410"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"19a-qmzpsmIuQpVGNxhwVbrNCOu7sBI\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:10:28 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Employee updated successfully.\",\n    \"data\": {\n        \"employee\": {\n            \"id\": 11,\n            \"nip\": \"199808022026091\",\n            \"nama\": \"Taiga Kagami\",\n            \"email\": \"tkagami@company-name.com\",\n            \"alamat\": \"Jl. Prapanca Raya No.95, Cipete Utara, Kebayoran Baru, Kota Jakarta Selatan, DKI Jakarta\",\n            \"division_id\": 2,\n            \"division_name\": \"Finance\",\n            \"status\": \"ACTIVE\",\n            \"created_at\": \"2026-11-03T03:04:04.000Z\",\n            \"updated_at\": \"2026-11-03T03:10:28.000Z\"\n        }\n    }\n}"
+        },
+        {
+          "name": "Update Employee Field (Deactivate/Activate)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"INACTIVE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees/8",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                "8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "422"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a6-W36KQrLjAQH+DcaAbqoE2mX0TrE\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:11:11 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Employee updated successfully.\",\n    \"data\": {\n        \"employee\": {\n            \"id\": 8,\n            \"nip\": \"199606032026011\",\n            \"nama\": \"Shoichi Imayoshi\",\n            \"email\": \"simayoshi@company-name.com\",\n            \"alamat\": \"Jl. K.H. Mas Mansyur No. 1, Karet Tengsin, Tanah Abang, Kota Jakarta Pusat, DKI Jakarta\",\n            \"division_id\": 3,\n            \"division_name\": \"Human Capital\",\n            \"status\": \"INACTIVE\",\n            \"created_at\": \"2026-11-03T01:01:01.000Z\",\n            \"updated_at\": \"2026-11-03T03:11:11.000Z\"\n        }\n    }\n}"
+        },
+        {
+          "name": "Update Employee Field (Invalid Status Enum)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"SUSPENDED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                "4"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "54"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"36-cbVCS4c77N05pHpbvVDKDumDaeI\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:11:52 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Invalid employee status.\"\n}"
+        },
+        {
+          "name": "Update Employee Field (Attempt to Change NIP)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0snq}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nip\": \"199999999999999\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/employees/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                "4"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "66"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"42-vVng9JG66+ZqFDuYWrfwi0RSZjM\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:12:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"No valid fields provided for update.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete (Change Employee Status to INACTIVE)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0ufk}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/employees/5",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "employees",
+            "5"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete (Change Employee Status to INACTIVE)",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_0ufk}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/employees/5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "employees",
+                "5"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "63"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3f-VKZtcJ9AeTirvJvpiQIE2bBWYcM\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 03:14:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Employee deactivated successfully.\"\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "json_web_token_0snq",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0ufk",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_16xn",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0m0n",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0w3q",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0l7v",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_147b",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0c9o",
+      "secret": true
+    }
+  ]
+}

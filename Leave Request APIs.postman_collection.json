@@ -1,0 +1,662 @@
+{
+  "info": {
+    "_postman_id": "9179f8b1-bfb0-4b56-863a-6d4970f6a1c7",
+    "name": "Leave Request APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31059158",
+    "_collection_link": "https://go.postman.co/collection/31059158-9179f8b1-bfb0-4b56-863a-6d4970f6a1c7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Leave Request (Staff)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0ry5}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"start_date\": \"2026-11-09\",\r\n    \"end_date\": \"2026-11-11\",\r\n    \"reason\": \"Personal matters\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/leave-requests",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "leave-requests"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Leave Request (Staff)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_0ry5}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"start_date\": \"2026-11-09\",\r\n    \"end_date\": \"2026-11-11\",\r\n    \"reason\": \"Personal matters\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/leave-requests",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "leave-requests"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "494"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1ee-AJvH79wT+CULAShjvWYNwHzZOQs\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:03:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Leave request submitted successfully.\",\n    \"data\": {\n        \"leave_request\": {\n            \"id\": 1,\n            \"employee_id\": 4,\n            \"employee_name\": \"Atsushi Murasakibara\",\n            \"division_id\": 1,\n            \"division_name\": \"Information Technology\",\n            \"start_date\": \"2026-11-08T17:00:00.000Z\",\n            \"end_date\": \"2026-11-10T17:00:00.000Z\",\n            \"reason\": \"Personal matters\",\n            \"total_days\": 3,\n            \"status\": \"PENDING\",\n            \"approved_by\": null,\n            \"approved_by_name\": null,\n            \"approved_at\": null,\n            \"created_at\": \"2026-11-03T04:03:46.000Z\",\n            \"updated_at\": \"2026-11-03T04:03:46.000Z\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Own Leave Request (Staff)",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0ry5}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"start_date\": \"2026-11-09\",\r\n    \"end_date\": \"2026-11-11\",\r\n    \"reason\": \"Personal matters\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/leave-requests",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "leave-requests"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Own Leave Request (Staff)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_0ry5}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"start_date\": \"2026-11-09\",\r\n    \"end_date\": \"2026-11-11\",\r\n    \"reason\": \"Personal matters\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/leave-requests",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "leave-requests"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1384"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"568-TwnXG7SNKgynoIa5BmbzthDof0I\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:12:14 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"leave_requests\": [\n            {\n                \"id\": 3,\n                \"employee_id\": 4,\n                \"nip\": \"199810092026041\",\n                \"employee_name\": \"Atsushi Murasakibara\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"start_date\": \"2026-12-11T17:00:00.000Z\",\n                \"end_date\": \"2026-12-13T17:00:00.000Z\",\n                \"reason\": \"Sleep\",\n                \"total_days\": 1,\n                \"status\": \"PENDING\",\n                \"approved_by\": null,\n                \"approved_by_name\": null,\n                \"approved_at\": null,\n                \"created_at\": \"2026-11-03T04:12:06.000Z\",\n                \"updated_at\": \"2026-11-03T04:12:06.000Z\"\n            },\n            {\n                \"id\": 2,\n                \"employee_id\": 4,\n                \"nip\": \"199810092026041\",\n                \"employee_name\": \"Atsushi Murasakibara\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"start_date\": \"2026-11-30T17:00:00.000Z\",\n                \"end_date\": \"2026-12-04T17:00:00.000Z\",\n                \"reason\": \"Personal matters again\",\n                \"total_days\": 4,\n                \"status\": \"REJECTED\",\n                \"approved_by\": 2,\n                \"approved_by_name\": \"Seijuro Akashi\",\n                \"approved_at\": \"2026-11-03T04:10:44.000Z\",\n                \"created_at\": \"2026-11-03T04:09:31.000Z\",\n                \"updated_at\": \"2026-11-03T04:10:44.000Z\"\n            },\n            {\n                \"id\": 1,\n                \"employee_id\": 4,\n                \"nip\": \"199810092026041\",\n                \"employee_name\": \"Atsushi Murasakibara\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"start_date\": \"2026-11-08T17:00:00.000Z\",\n                \"end_date\": \"2026-11-10T17:00:00.000Z\",\n                \"reason\": \"Personal matters\",\n                \"total_days\": 3,\n                \"status\": \"APPROVED\",\n                \"approved_by\": 2,\n                \"approved_by_name\": \"Seijuro Akashi\",\n                \"approved_at\": \"2026-11-03T04:08:43.000Z\",\n                \"created_at\": \"2026-11-03T04:03:46.000Z\",\n                \"updated_at\": \"2026-11-03T04:08:43.000Z\"\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Pending Leave Requests (Division Head)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0ghp}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/leave-requests/pending",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "leave-requests",
+            "pending"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Pending Leave Requests (Division Head)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_0ghp}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leave-requests/pending",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "leave-requests",
+                "pending"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "369"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"171-NgWGj3WEhTc78JBx3RPHu4nrzFU\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:07:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"leave_requests\": [\n            {\n                \"id\": 1,\n                \"employee_id\": 4,\n                \"nip\": \"199810092026041\",\n                \"employee_name\": \"Atsushi Murasakibara\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"start_date\": \"2026-11-08T17:00:00.000Z\",\n                \"end_date\": \"2026-11-10T17:00:00.000Z\",\n                \"reason\": \"Personal matters\",\n                \"total_days\": 3,\n                \"status\": \"PENDING\",\n                \"created_at\": \"2026-11-03T04:03:46.000Z\"\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Approve Leave Requests (Division Head)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0ghp}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/leave-requests/1/approve",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "leave-requests",
+            "1",
+            "approve"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Approve Leave Requests (Division Head)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_0ghp}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leave-requests/1/approve",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "leave-requests",
+                "1",
+                "approve"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "65"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"41-nmm2W6+7E3Tm3qI2+b0457/PHSM\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:08:43 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Leave request approved successfully.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Attempt to Approve Leave Requests (Another Division Head)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0wd1}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/leave-requests/3/approve",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "leave-requests",
+            "3",
+            "approve"
+          ]
+        },
+        "description": "Another division head is trying to approve on another division's employee's behalf"
+      },
+      "response": [
+        {
+          "name": "Attempt to Approve Leave Requests (Another Division Head)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0wd1}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leave-requests/3/approve",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "leave-requests",
+                "3",
+                "approve"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "54"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"36-yS/tWEwtcesxb0qJ38UjgFJFKJo\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:18:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Leave request not found.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Reject Leave Requests (Division Head)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0ghp}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/leave-requests/2/reject",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "leave-requests",
+            "2",
+            "reject"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Reject Leave Requests (Division Head)",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearer_token_0ghp}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leave-requests/2/reject",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "leave-requests",
+                "2",
+                "reject"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "65"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"41-O1r3HTfh9IAbxY9PmsfY3zwVQ5I\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:10:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Leave request rejected successfully.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "View All Leave Requests (Admin)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{json_web_token_0c9o}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/leave-requests",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "leave-requests"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "View All Leave Requests (Admin)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{json_web_token_0c9o}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leave-requests",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "leave-requests"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1384"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"568-TwnXG7SNKgynoIa5BmbzthDof0I\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 03 Nov 2026 04:13:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"leave_requests\": [\n            {\n                \"id\": 3,\n                \"employee_id\": 4,\n                \"nip\": \"199810092026041\",\n                \"employee_name\": \"Atsushi Murasakibara\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"start_date\": \"2026-12-11T17:00:00.000Z\",\n                \"end_date\": \"2026-12-13T17:00:00.000Z\",\n                \"reason\": \"Sleep\",\n                \"total_days\": 1,\n                \"status\": \"PENDING\",\n                \"approved_by\": null,\n                \"approved_by_name\": null,\n                \"approved_at\": null,\n                \"created_at\": \"2026-11-03T04:12:06.000Z\",\n                \"updated_at\": \"2026-11-03T04:12:06.000Z\"\n            },\n            {\n                \"id\": 2,\n                \"employee_id\": 4,\n                \"nip\": \"199810092026041\",\n                \"employee_name\": \"Atsushi Murasakibara\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"start_date\": \"2026-11-30T17:00:00.000Z\",\n                \"end_date\": \"2026-12-04T17:00:00.000Z\",\n                \"reason\": \"Personal matters again\",\n                \"total_days\": 4,\n                \"status\": \"REJECTED\",\n                \"approved_by\": 2,\n                \"approved_by_name\": \"Seijuro Akashi\",\n                \"approved_at\": \"2026-11-03T04:10:44.000Z\",\n                \"created_at\": \"2026-11-03T04:09:31.000Z\",\n                \"updated_at\": \"2026-11-03T04:10:44.000Z\"\n            },\n            {\n                \"id\": 1,\n                \"employee_id\": 4,\n                \"nip\": \"199810092026041\",\n                \"employee_name\": \"Atsushi Murasakibara\",\n                \"division_id\": 1,\n                \"division_name\": \"Information Technology\",\n                \"start_date\": \"2026-11-08T17:00:00.000Z\",\n                \"end_date\": \"2026-11-10T17:00:00.000Z\",\n                \"reason\": \"Personal matters\",\n                \"total_days\": 3,\n                \"status\": \"APPROVED\",\n                \"approved_by\": 2,\n                \"approved_by_name\": \"Seijuro Akashi\",\n                \"approved_at\": \"2026-11-03T04:08:43.000Z\",\n                \"created_at\": \"2026-11-03T04:03:46.000Z\",\n                \"updated_at\": \"2026-11-03T04:08:43.000Z\"\n            }\n        ]\n    }\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "bearer_token_0ry5",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_15vw",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0ghp",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0c9o",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_147b",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0wd1",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_027d",
+      "secret": true
+    }
+  ]
+}
